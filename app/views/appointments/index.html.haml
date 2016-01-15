@@ -1,0 +1,10 @@
+%h2 Make An Appointment
+%hr
+= form_for :appointment, url: url_for(controller: 'appointments', action: 'create') do |f|
+  = f.label :doctor_id, placeholder: '1-25'
+  = f.number_field :doctor_id
+  = f.label :patient_id, placeholder: '301-600'
+  = f.number_field :patient_id
+  = f.label :date, placeholder: "yyyy/mm/dd/hour/minute"
+  = f.datetime_field :date
+  = f.submit :submit
